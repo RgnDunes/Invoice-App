@@ -1,0 +1,325 @@
+.container {
+  display: flex;
+  width: 100vw;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.container > .left {
+  flex: 0.2;
+  position: sticky;
+  top: 0;
+}
+
+.container > .left > h1 {
+  font-weight: normal;
+  font-size: calc(12px + 0.5vw);
+  transition: all 0.25s ease-in-out;
+  padding: 10px;
+}
+
+.container > .left > h1:hover {
+  border-left: 4px solid rgb(84, 86, 208);
+  padding-left: 5px;
+  color: rgb(84, 86, 208);
+  background-color: rgb(249, 251, 255);
+}
+
+.container > .right {
+  flex: 0.8;
+  padding: 0 30px;
+  background-color: rgb(249, 251, 255);
+}
+
+.customer {
+  display: block;
+}
+
+.newCustomer {
+  display: none;
+}
+
+.container > .right > .customer > .newCustomer > h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.container > .right > .customer > .newCustomer > form {
+  padding: 20px;
+  background-color: #fff;
+  font-size: calc(12px + 0.1vw);
+}
+
+.container > .right > .customer > .newCustomer > form > .lineOne {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.container > .right > .customer > .newCustomer > form > .lineTwo {
+  display: flex;
+  align-items: flex-end;
+}
+
+.container > .right > .customer > .newCustomer > form > .lineOne > .name,
+.container > .right > .customer > .newCustomer > form > .lineOne > .phone,
+.container > .right > .customer > .newCustomer > form > .lineTwo > .email {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > .right > .customer > .newCustomer > form > .lineOne > .name,
+.container > .right > .customer > .newCustomer > form > .lineTwo > .email {
+  margin-right: 20px;
+}
+
+.container
+  > .right
+  > .customer
+  > .newCustomer
+  > form
+  > .lineOne
+  > .name
+  > input,
+.container
+  > .right
+  > .customer
+  > .newCustomer
+  > form
+  > .lineOne
+  > .phone
+  > input,
+.container
+  > .right
+  > .customer
+  > .newCustomer
+  > form
+  > .lineTwo
+  > .email
+  > input {
+  border: 3px solid rgb(248, 250, 253);
+}
+
+.container > .right > .customer > .newCustomer > form input {
+  padding: 7px 13px;
+}
+
+.container > .right > .customer > .newCustomer > form input[type="submit"] {
+  background-color: rgb(84, 86, 208);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: white;
+}
+
+.container > .right > .customer > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > .right > .customer > .header > h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.container > .right > .customer > .header > button {
+  background-color: rgb(84, 86, 208);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.container > .right > .customer > .content {
+  display: grid;
+  place-items: center;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+tr:not(:first-child) {
+  background-color: rgb(255, 255, 255);
+}
+
+th {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: calc(12px + 0.1vw);
+  text-transform: uppercase;
+}
+
+td {
+  padding: 10px 0;
+  font-weight: normal;
+  font-size: calc(12px + 0.1vw);
+}
+
+.items {
+  display: none;
+}
+
+.newItem {
+  display: none;
+}
+
+.items > .newItem > h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.items > .newItem > form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(12px + 0.1vw);
+}
+
+.items > .newItem > form > .name,
+.items > .newItem > form > .price,
+.items > .newItem > form > .desc {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+.items > .newItem > form > .name > input,
+.items > .newItem > form > .price > input,
+.items > .newItem > form > .desc > textarea {
+  border: 3px solid rgb(248, 250, 253);
+  padding: 7px 13px;
+}
+
+.items > .newItem > form > input[type="submit"] {
+  background-color: rgb(84, 86, 208);
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: white;
+  padding: 7px 13px;
+}
+
+.items > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.items > .header > h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.items > .header > button {
+  background-color: rgb(84, 86, 208);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.invoices {
+  display: none;
+}
+
+.newInvoice {
+  display: none;
+}
+
+.invoices > .newInvoice > form > h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.invoices > .newInvoice > form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: flex-start;
+  font-size: calc(12px + 0.1vw);
+}
+
+.invoices > .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.invoices > .header > h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.invoices > .header > button {
+  background-color: rgb(84, 86, 208);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.newInvoice > form > .form__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.newInvoice > form > .form__header > h1 {
+  font-weight: bold;
+  font-size: calc(12px + 1.3vw);
+}
+
+.newInvoice > form > .form__header > input[type="submit"] {
+  background-color: rgb(84, 86, 208);
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+.newInvoice > form > .form__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.newInvoice > form > .form__row > .form__rowCols {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.newInvoice > form > .form__row > .form__rowCols > .data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.newInvoice input,
+textarea {
+  border: 3px solid rgb(248, 250, 253);
+  padding: 7px 13px;
+}
+
+.table__newInvoice {
+  border-spacing: 0 0;
+}
+
+.table__newInvoice tr td {
+  border-bottom: 3px solid rgb(250, 251, 254);
+}

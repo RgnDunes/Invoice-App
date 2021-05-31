@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Invoice App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <h1 onClick="customerRoute()">Customers</h1>
+        <h1 onClick="itemRoute()">Items</h1>
+        <h1 onClick="invoiceRoute()">Invoices</h1>
+      </div>
+      <div class="right">
+        <div class="customer">
+          <div class="newCustomer">
+            <h1>New Customer</h1>
+            <form action="#">
+              <div class="lineOne">
+                <div class="name">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" />
+                </div>
+                <div class="phone">
+                  <label for="phone">Phone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                  />
+                </div>
+              </div>
+              <div class="lineTwo">
+                <div class="email">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" />
+                </div>
+                <input type="submit" value="💾 Save Customer" />
+              </div>
+            </form>
+          </div>
+          <div class="header">
+            <h1>Customers</h1>
+            <button onClick="newCustomer()">+ New Customer</button>
+          </div>
+          <div class="content">
+            <table class="table__customers"></table>
+          </div>
+        </div>
+        <div class="items">
+          <div class="newItem">
+            <h1>New Item</h1>
+            <form action="#">
+              <div class="name">
+                <label for="name">Name</label>
+                <input type="text" id="name" />
+              </div>
+              <div class="price">
+                <label for="price">Price</label>
+                <input type="text" id="price" />
+              </div>
+              <div class="desc">
+                <label for="description">Description</label>
+                <textarea id="description" rows="5"></textarea>
+              </div>
+              <input type="submit" value="💾 Save Item" />
+            </form>
+          </div>
+          <div class="header">
+            <h1>Items</h1>
+            <button onClick="newItem()">+ New Item</button>
+          </div>
+          <div class="content">
+            <table class="table__items"></table>
+          </div>
+        </div>
+        <div class="invoices">
+          <div class="newInvoice">
+            <form action="#">
+              <div class="form__header">
+                <h1>New Invoice</h1>
+                <input type="submit" value="💾 Save Invoice" />
+              </div>
+              <div class="form__row">
+                <div class="form__rowCols">
+                  <label for="bill__to">Bill To</label>
+                  <textarea name="bill__to" id="bill__to" rows="5"></textarea>
+                </div>
+                <div class="form__rowCols">
+                  <div class="data">
+                    <label for="issue">Issued At</label>
+                    <input type="date" id="issue" />
+                  </div>
+                  <div class="data">
+                    <label for="inv">Invoice Number</label>
+                    <input type="text" id="inv" />
+                  </div>
+                </div>
+                <div class="form__rowCols">
+                  <div class="data">
+                    <label for="due">Due Date</label>
+                    <input type="date" id="due" />
+                  </div>
+                  <div class="data">
+                    <label for="ref">Ref Number</label>
+                    <input type="text" />
+                  </div>
+                </div>
+              </div>
+              <div class="form__row">
+                <table class="table__newInvoice">
+                  <tr>
+                    <th>Items</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Amount</th>
+                  </tr>
+                  <tr>
+                    <td>I1</td>
+                    <td>Q1</td>
+                    <td>P1</td>
+                    <td>A1</td>
+                  </tr>
+                  <tr>
+                    <td>I2</td>
+                    <td>Q2</td>
+                    <td>P2</td>
+                    <td>A2</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="form__row">
+                <div class="form__rowCols">
+                  <label for="notes">Notes</label>
+                  <textarea name="notes" id="notes" rows="3"></textarea>
+                </div>
+                <div class="form__rowCols">
+                  <label for="notes">Notes</label>
+                  <textarea name="notes" id="notes" rows="5"></textarea>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="header">
+            <h1>Invoices</h1>
+            <button onClick="newInvoice()">+ New Invoice</button>
+          </div>
+          <div class="content">
+            <table class="table__invoices"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
